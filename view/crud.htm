@@ -1,0 +1,13 @@
+<section>
+  
+  <div id="logger">{{ info }}</div>
+
+  <ul ng-repeat="item in users">
+    <li>{{ item.name }} lives in {{ item.address }} <span ng-click="deleteIt(item._id)" class="label label-danger">delete</span> </li>
+  </ul>
+  <form method="POST" class="form-group" action="/api/users">
+    <input type="text" class="form-control" name="name">
+    <input type="text" class="form-control" name="address">
+    <input type="submit" class="btn btn-success">
+  </form>
+</section>

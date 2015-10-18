@@ -1,0 +1,14 @@
+<!-- update on submit -->
+<section>
+  <fieldset>
+    <legend>Update Legend -> {{ update }}</legend>
+    <form name="myForm" ng-submit="formSubmit(inputText)">
+      <input type="text" name="inField" required minlength="3" class="form-control" ng-model="inputText">
+      <div class="alert" ng-messages="myForm.inField.$error">
+        <span class="alert alert-danger" ng-message="required">This field is required</span>
+        <span class="alert alert-danger" ng-message="minlength">minimum 3 chars</span>
+      </div>
+      <input type="submit" class="btn btn-success">
+    </form>
+  </fieldset>
+</section>

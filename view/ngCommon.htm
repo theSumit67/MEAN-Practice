@@ -1,0 +1,19 @@
+<section>
+  <form name="myForm" action="#form">
+    <input type="text" name="inField" class="form-control" ng-model='inField'>
+  </form>
+  <div>
+    <span class="label" ng-Class="{ 'label-info': inField.length !== 5, 'label-warning': inField.length < 5 }">
+    ngClass="{ 'label-info': inField.length !== 5, 'label-warning': inField.length &lt; 5 }"
+  </span>
+  </div>
+  <div ng-if="inField.length !== 5">
+    <div class="alert alert-danger">Ng if !== 5</div>
+  </div>
+  <div ng-show='inField.length < 5'>
+    <div class="alert alert-warning">ng show when &lt; 5</div>
+  </div>
+  <div ng-hide='inField.length < 5'>
+    <div class="alert alert-info">ng hide when &lt; 5</div>
+  </div>
+</section>
